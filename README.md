@@ -25,7 +25,7 @@ Live Demo: [https://mohammadzali2005.github.io/PricingTable/]
 
 Clone the repository:
 
-git clone 
+git clone https://github.com/mohammadzali2005/PricingTable
 
 📚 Learning Goals:
 
