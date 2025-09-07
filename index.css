@@ -1,0 +1,227 @@
+/* imported a font from google fonts */
+@import url('https://fonts.googleapis.com/css2?family=Be+Vietnam+Pro:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=DM+Sans:ital,opsz,wght@0,9..40,100..1000;1,9..40,100..1000&family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&family=Outfit:wght@100..900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Sora:wght@100..800&display=swap');
+
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+body{
+    width: 100vw;
+    height: 100vh;
+    font-family: 'Be Vietnam Pro';
+}
+
+header{         /* header section */
+    width: 100%;
+    height: 20%;
+    background-image: url(./Images/bg-pattern.png);
+    background-repeat: repeat;
+    background-position: center;
+    background-size: cover;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    padding: 2% 0;
+    background-color: #F8FAFC;
+    border-bottom: 1px solid #E5E7EB;
+}
+
+.title{
+    font-size: 32px;
+    font-weight: bold;
+    margin-bottom: 10px;
+    color: #121826;
+}
+
+.halfTitle{
+    font-size: 16px;
+    font-weight: 400;
+    color: #4D5562;
+    text-align: center;
+}
+
+section{            /* content section */
+    width: 100%;
+    height: 80%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+table{
+    width: 75%;
+    height: 85%;
+}
+
+tr{
+    width: 19%;
+    height: 100%;
+    float: left;
+    display: flex;
+    flex-direction: column;
+}
+
+tr td{
+    height: 11.1%;
+    width: 100%;
+    border-bottom: 1px solid #E5E7EB;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 16px;
+    font-weight: 500;
+}
+
+tr td:first-child:not(tr:first-child td:first-child){        
+    height: 270px;
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+    flex-direction: column;
+    border-top-right-radius: 15px;
+    border-top-left-radius: 15px;
+}
+
+tr td:last-child{
+    border-bottom: none;          
+    border-bottom-left-radius: 15px;
+    border-bottom-right-radius: 15px;
+}
+
+.planTitle{     
+    font-size: 16px;
+    color: #263FA9;
+    padding: 5px;
+    border-radius: 15px;
+}
+
+.planPrice{
+    font-size: 64px;
+    font-weight: bold;
+}
+
+.planTime{
+    font-size: 16px;
+    font-weight: 400;
+    color: #4D5562;
+}
+
+.gsButton{     
+    color: #263FA9;
+    text-decoration: none;
+}
+
+tr:first-child{  
+    padding-top: 180px;
+    width: 24%
+}
+
+tr:first-child td{   
+    width: 100%;
+    height: 11.1%;
+    border-bottom: 1px solid #E5E7EB;
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    background-color: #F8FAFC;
+    font-size: 16px;
+    font-weight: 500;
+    padding: 0 15px;
+}
+
+tr:first-child td:first-child{     
+    border-top-left-radius: 15px;
+}
+
+@media (max-width: 1200px){         /*decreasing the font sizes for tablet screen size*/
+    tr:first-child td{
+        font-size: 14px;
+    }
+
+    .planPrice{
+        font-size: 56px;
+    }
+
+    .planTime{
+        font-size: 14px;
+    }
+}
+
+@media (max-width: 1000px){         /*decreasing the font sizes for tablet screen size*/
+    tr:nth-child(2){
+        display: none;
+    }
+
+    tr{
+        width: 24%;
+    }
+
+    tr:first-child{
+        width: 28%;
+    }
+    
+    tr td{
+        font-size: 14px;
+    }
+}
+
+@media (max-width: 800px){          /*decreasing the font sizes for mobile screen size*/
+    table {
+        width: 85%;
+    }
+
+    tr:nth-child(3){
+        display: none;
+    }
+
+    tr{
+        width: 32%;
+    }
+
+    tr:first-child{
+        width: 36%;
+    }
+
+    .planPrice{
+        font-size: 48px;
+    }
+}
+
+/*Animations: */
+.gsButton:hover{           
+    cursor: pointer;
+}
+
+tr:not(tr:first-child):hover .planTitle{        
+    color: white;
+    background-color: #263FA9;
+}
+
+tr:not(tr:first-child):hover .planPrice{  
+    color: white;
+}
+
+tr:not(tr:first-child):hover .planTime{  
+    color: white;
+}
+
+tr:not(tr:first-child):hover td:not(td:last-child){    
+    background-color: #121826;
+    color: white;
+    border-bottom-color: #4D5562;
+}
+
+tr:not(tr:first-child):hover .gsButton{    
+    background-color: #7C4F1E;
+    color: white;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-bottom-left-radius: 15px;
+    border-bottom-right-radius: 15px;
+}
